@@ -39,3 +39,18 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+
+// Attribution des services selon le rôle
+if (userRole === "employe") {
+    serviceMessage = "Accès aux Services diététiques.";
+} else if (userRole === "membre_inscrit") {
+    serviceMessage = "Accès aux Services diététiques + interaction individuelle avec un diététicien.";
+} else if (userRole === "abonne") {
+    serviceMessage = "Accès partiel aux Services diététiques.";
+} else if (userRole === "non_abonne") {
+    serviceMessage = "Veuillez vous inscrire ou vous abonner pour accéder aux Services diététiques.";
+} else {
+    serviceMessage = "Rôle inconnu. Aucun service disponible.";
+}
+console.log("Message pour l'utilisateur :", serviceMessage);
