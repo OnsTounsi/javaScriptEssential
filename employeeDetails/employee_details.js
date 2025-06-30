@@ -5,7 +5,7 @@ const employees = [
     { id: 4, name: 'Sarah Lee', age: 32, department: 'IT', salary: 55000, specialization: 'JavaScript' },
   ];
   
-  // ✅ Afficher tous les employés
+
   function displayEmployees() {
     const totalEmployees = employees.map(employee =>
       `<p>${employee.id}: ${employee.name} - ${employee.department} - ${employee.specialization} - $${employee.salary}</p>`
@@ -13,13 +13,13 @@ const employees = [
     document.getElementById('employeesDetails').innerHTML = totalEmployees;
   }
   
-  // ✅ Calcul des salaires totaux
+  
   function calculateTotalSalaries() {
     const totalSalaries = employees.reduce((acc, employee) => acc + employee.salary, 0);
     alert(`Total des salaires : $${totalSalaries}`);
   }
   
-  // ✅ Afficher les employés RH
+  
   function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employee.department === 'HR');
     const hrEmployeesDisplay = hrEmployees.map(employee =>
@@ -28,7 +28,7 @@ const employees = [
     document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
   }
   
-  // ✅ Rechercher un employé par ID
+ 
   function findEmployeeById(employeeId) {
     const foundEmployee = employees.find(employee => employee.id === employeeId);
     if (foundEmployee) {
@@ -39,7 +39,7 @@ const employees = [
     }
   }
   
-  // ✅ Afficher les employés par spécialisation
+
   function displayEmployeesBySpecialization(specialization) {
     const specializedEmployees = employees.filter(emp => emp.specialization === specialization);
     if (specializedEmployees.length > 0) {

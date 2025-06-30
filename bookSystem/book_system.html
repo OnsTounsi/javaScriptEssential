@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestion de Livres</title>
+</head>
+<body>
+  <h1>Gestion de Livres</h1>
+
+  <label for="bookTitle">Titre du livre :</label>
+  <input type="text" id="bookTitle" required><br>
+
+  <label for="bookAuthor">Auteur :</label>
+  <input type="text" id="bookAuthor" required><br><br>
+
+  <button onclick="addBook()">Ajouter un livre</button>
+
+  <h2>Liste des livres</h2>
+  <div id="bookList"></div>
+
+  <script src="book_manager.js"></script>
+</body>
+</html>
